@@ -32,5 +32,7 @@ public class Variables {
         sh += 2; // sh = sh + 2;
 
         String someString = "Dog";
+
+        String anotherString = "Cat";
     }
 }
