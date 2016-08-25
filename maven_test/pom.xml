@@ -1,0 +1,15 @@
+<project>
+
+
+	<groupId>org.hillel</groupId>
+	<artifactId>helloMaven</artifactId>
+	<version>1.0</version>
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>jar</packaging>
+	
+	<build>
+		<finalName>customName</finalName>
+	</build>
+
+
+</project>
