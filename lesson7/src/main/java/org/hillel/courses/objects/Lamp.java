@@ -2,25 +2,35 @@ package org.hillel.courses.objects;
 
 public class Lamp {
 
-    int power;
-    String color;
-    boolean shines;
+    private int power;
+    private String color;
+    private boolean shines;
 
-    Lamp(int powerMethod, String colorMethod, boolean shinesMethod) {
-        power = powerMethod;
-        color = colorMethod;
-        shines = shinesMethod;
+    public Lamp() {
+        this(30, "red", true);
     }
 
-    void switchOn() {
+    public Lamp(int power, String color, boolean shines) {
+        if (power == 50) {
+            System.out.println("power can't be 50");
+            this.power = 0;
+            this.shines = false;
+        } else {
+            this.power = power;
+            this.color = color;
+            this.shines = shines;
+        }
+    }
+
+    public void switchOn() {
         shines = true;
     }
 
-    void switchOff() {
+    public void switchOff() {
         shines = false;
     }
 
-    boolean isShines() {
+    public boolean isShines() {
         return shines;
     }
 }
