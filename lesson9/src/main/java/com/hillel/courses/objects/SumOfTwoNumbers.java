@@ -22,7 +22,7 @@ public class SumOfTwoNumbers {
         int start, end;
         start = 0;
         end = array.length - 1;
-        
+
         while (start != end) {
             int currentSum = array[start] + array[end];
 
