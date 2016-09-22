@@ -22,7 +22,9 @@ public class Board {
         fillBoard();
     }
 
-    public boolean makeMove(String move) {
+    public boolean makeMove() {
+        String move = currentPlayer.enterMove();
+
         if (!validateMove(move)) {
             return false;
         }
@@ -84,4 +86,6 @@ public class Board {
     public Player getWinner() {
         return winner;
     }
+
+
 }

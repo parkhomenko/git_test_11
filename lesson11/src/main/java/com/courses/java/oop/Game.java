@@ -8,14 +8,14 @@ public class Game {
 
         Scanner scanner = new Scanner(System.in);
 
-        Player playerFirst = new Player("Bob", 25, 'X');
-        Player playerSecond = new Player("Mike", 35, 'O');
+        Player playerFirst = new Human("Bob", 25, 'X');
+        Player playerSecond = new AI("Mike", 35, 'O');
 
         Board board = new Board(playerFirst, playerSecond);
 
         while (!board.gameFinished()) {
-            String move = getMoveFromConsole(scanner);
-            board.makeMove(move);
+
+            board.makeMove();
             board.printBoard();
         }
 
