@@ -1,31 +1,20 @@
 package com.courses.java.oop;
 
-import java.util.Scanner;
+public abstract class Game {
 
-public class Game {
+    abstract boolean gameFinished();
+    abstract void makeMove();
+    abstract void printBoard();
+    abstract Player getWinner();
 
-    public static void main(String[] args) {
+    final void startGame() {
+        while (!gameFinished()) {
 
-        Scanner scanner = new Scanner(System.in);
-
-        Player playerFirst = new Human("Bob", 25, 'X');
-        Player playerSecond = new AI("Mike", 35, 'O');
-
-        Board board = new Board(playerFirst, playerSecond);
-
-        while (!board.gameFinished()) {
-
-            board.makeMove();
-            board.printBoard();
+            makeMove();
+            printBoard();
         }
 
-        Player player = board.getWinner();
+        Player player = getWinner();
         System.out.println(player.getName() + " " + player.getAge());
-    }
-
-    private static String getMoveFromConsole(Scanner scanner) {
-        System.out.println("Player moves...");
-        System.out.print("Enter move: ");
-        return scanner.next();
     }
 }
