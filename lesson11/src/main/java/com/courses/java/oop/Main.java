@@ -8,7 +8,12 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        Game game = new TicTacToe();
+        Player playerFirst = new Human("Bob", 25, 'X');
+        Player playerSecond = new AI("Mike", 35, 'O');
+
+        Board board = new Board(playerFirst, playerSecond);
+
+        Game game = new TicTacToe(playerFirst, playerSecond, board);
         game.startGame();
 
 

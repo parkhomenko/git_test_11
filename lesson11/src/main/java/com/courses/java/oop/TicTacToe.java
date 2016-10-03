@@ -2,10 +2,16 @@ package com.courses.java.oop;
 
 public class TicTacToe extends Game {
 
-    Player playerFirst = new Human("Bob", 25, 'X');
-    Player playerSecond = new AI("Mike", 35, 'O');
+    private Player playerFirst;
+    private Player playerSecond;
 
-    Board board = new Board(playerFirst, playerSecond);
+    private Board board;
+
+    public TicTacToe(Player playerFirst, Player playerSecond, Board board) {
+        this.playerFirst = playerFirst;
+        this.playerSecond = playerSecond;
+        this.board = board;
+    }
 
     @Override
     boolean gameFinished() {
