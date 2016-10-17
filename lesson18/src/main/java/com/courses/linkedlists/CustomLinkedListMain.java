@@ -4,7 +4,7 @@ public class CustomLinkedListMain {
 
     public static void main(String[] args) {
 
-        CustomLinkedList list = new CustomLinkedList();
+        CustomLinkedList<String> list = new CustomLinkedList<>();
         list.add("a");
         list.add("b");
         list.add("c");
@@ -16,8 +16,10 @@ public class CustomLinkedListMain {
 
         //list.introduceCycle(4);
 
+        /*
         if (!list.hasCycle()) {
             System.out.println(list);
         }
+        */
     }
 }

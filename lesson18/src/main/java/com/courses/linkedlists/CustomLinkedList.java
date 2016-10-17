@@ -1,16 +1,23 @@
 package com.courses.linkedlists;
 
-public class CustomLinkedList {
+import java.util.Iterator;
+
+public class CustomLinkedList<E> implements Iterable {
 
     private Node firstNode;
     private Node lastNode;
 
+    @Override
+    public Iterator iterator() {
+        return null;
+    }
+
     private class Node {
-        String value;
+        E value;
         Node next;
     }
 
-    public void add(String element) {
+    public void add(E element) {
         Node node = new Node();
         node.value = element;
 
